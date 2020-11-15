@@ -36,7 +36,7 @@ namespace Pathfinding {
 	/// </summary>
 	[RequireComponent(typeof(Seeker))]
 	[AddComponentMenu("Pathfinding/AI/AILerp (2D,3D)")]
-	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_a_i_lerp.php")]
+	[HelpURL("http:///class_pathfinding_1_1_a_i_lerp.php")]
 	public class AILerp : VersionedMonoBehaviour, IAstarAI {
 		/// <summary>
 		/// Determines how often it will search for new paths.

@@ -17,7 +17,7 @@ namespace Pathfinding {
 	/// See: AstarPath.UpdateGraphs
 	/// See: graph-updates
 	/// </summary>
-	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_dynamic_grid_obstacle.php")]
+	[HelpURL("http:///class_pathfinding_1_1_dynamic_grid_obstacle.php")]
 	public class DynamicGridObstacle : GraphModifier {
 		/// <summary>Collider to get bounds information from</summary>
 		Collider coll;

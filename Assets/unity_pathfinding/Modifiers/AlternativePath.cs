@@ -15,7 +15,7 @@ namespace Pathfinding {
 	///
 	/// \ingroup modifiers
 	/// </summary>
-	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_alternative_path.php")]
+	[HelpURL("http:///class_pathfinding_1_1_alternative_path.php")]
 	public class AlternativePath : MonoModifier {
 #if UNITY_EDITOR
 		[UnityEditor.MenuItem("CONTEXT/Seeker/Add Alternative Path Modifier")]

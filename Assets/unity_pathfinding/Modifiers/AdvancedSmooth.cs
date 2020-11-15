@@ -9,7 +9,7 @@ namespace Pathfinding {
 	/// \ingroup modifiers
 	/// Smoothing by dividing path into turns and straight segments.
 	/// </summary>
-	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_advanced_smooth.php")]
+	[HelpURL("http:///class_pathfinding_1_1_advanced_smooth.php")]
 	public class AdvancedSmooth : MonoModifier {
 		public override int Order { get { return 40; } }
 

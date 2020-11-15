@@ -10,7 +10,7 @@ namespace Pathfinding {
 	/// Note: This has partly been replaced by using an RVOController along with RVONavmesh.
 	/// It will not yield exactly the same results though, so this script is still useful in some cases.
 	/// </summary>
-	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_navmesh_clamp.php")]
+	[HelpURL("http:///class_pathfinding_1_1_navmesh_clamp.php")]
 	public class NavmeshClamp : MonoBehaviour {
 		GraphNode prevNode;
 		Vector3 prevPos;

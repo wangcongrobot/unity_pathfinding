@@ -818,7 +818,7 @@ namespace Pathfinding.RVO {
 				var thread = new Thread(new ThreadStart(Run));
 				thread.IsBackground = true;
 #if !UNITY_SWITCH || UNITY_EDITOR
-				// Note: Setting the thread name seems to crash when deploying for Switch: https://forum.arongranberg.com/t/path-processor-crashing-nintendo-switch-build/6584
+				// Note: Setting the thread name seems to crash when deploying for Switch: https:///t/path-processor-crashing-nintendo-switch-build/6584
 				thread.Name = "RVO Simulator Thread";
 #endif
 				thread.Start();

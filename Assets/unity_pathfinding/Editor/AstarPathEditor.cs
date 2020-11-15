@@ -1436,7 +1436,7 @@ namespace Pathfinding {
 					}
 				}
 			} catch (System.Exception e) {
-				Debug.LogError("There was an error generating the graphs:\n"+e+"\n\nIf you think this is a bug, please contact me on forum.arongranberg.com (post a new thread)\n");
+				Debug.LogError("There was an error generating the graphs:\n"+e+"\n\nIf you think this is a bug, please contact me on forum.  (post a new thread)\n");
 				EditorUtility.DisplayDialog("Error Generating Graphs", "There was an error when generating graphs, check the console for more info", "Ok");
 				throw e;
 			} finally {

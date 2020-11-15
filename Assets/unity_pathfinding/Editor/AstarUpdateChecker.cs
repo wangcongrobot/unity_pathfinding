@@ -34,7 +34,7 @@ namespace Pathfinding {
 		const double updateCheckRate = 1F;
 
 		/// <summary>URL to the version file containing the latest version number.</summary>
-		const string updateURL = "http://www.arongranberg.com/astar/version.php";
+		const string updateURL = "http://www. /astar/version.php";
 
 		/// <summary>Last time an update check was made</summary>
 		public static System.DateTime lastUpdateCheck {
@@ -96,14 +96,14 @@ namespace Pathfinding {
 		/// This info can be updated when a check for new versions is done to ensure that there are no invalid links.
 		/// </summary>
 		static Dictionary<string, string> astarServerData = new Dictionary<string, string> {
-			{ "URL:modifiers", "http://www.arongranberg.com/astar/docs/modifiers.php" },
-			{ "URL:astarpro", "http://arongranberg.com/unity/a-pathfinding/astarpro/" },
-			{ "URL:documentation", "http://arongranberg.com/astar/docs/" },
-			{ "URL:findoutmore", "http://arongranberg.com/astar" },
-			{ "URL:download", "http://arongranberg.com/unity/a-pathfinding/download" },
-			{ "URL:changelog", "http://arongranberg.com/astar/docs/changelog.php" },
-			{ "URL:tags", "http://arongranberg.com/astar/docs/tags.php" },
-			{ "URL:homepage", "http://arongranberg.com/astar/" }
+			{ "URL:modifiers", "http://www. /astar/docs/modifiers.php" },
+			{ "URL:astarpro", "http:// /unity/a-pathfinding/astarpro/" },
+			{ "URL:documentation", "http:///" },
+			{ "URL:findoutmore", "http:// /astar" },
+			{ "URL:download", "http:// /unity/a-pathfinding/download" },
+			{ "URL:changelog", "http:///changelog.php" },
+			{ "URL:tags", "http:///tags.php" },
+			{ "URL:homepage", "http:// /astar/" }
 		};
 
 		static AstarUpdateChecker() {

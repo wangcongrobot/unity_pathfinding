@@ -18,7 +18,7 @@ namespace Pathfinding {
 	/// \ingroup modifiers
 	/// See: http://digestingduck.blogspot.se/2010/03/simple-stupid-funnel-algorithm.html
 	/// </summary>
-	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_funnel_modifier.php")]
+	[HelpURL("http:///class_pathfinding_1_1_funnel_modifier.php")]
 	public class FunnelModifier : MonoModifier {
 		/// <summary>
 		/// Determines if twists and bends should be straightened out before running the funnel algorithm.

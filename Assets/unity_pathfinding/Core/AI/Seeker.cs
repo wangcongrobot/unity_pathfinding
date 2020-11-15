@@ -17,7 +17,7 @@ namespace Pathfinding {
 	/// See: modifiers (view in online documentation for working links)
 	/// </summary>
 	[AddComponentMenu("Pathfinding/Seeker")]
-	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_seeker.php")]
+	[HelpURL("http:///class_pathfinding_1_1_seeker.php")]
 	public class Seeker : VersionedMonoBehaviour {
 		/// <summary>
 		/// Enables drawing of the last calculated path using Gizmos.

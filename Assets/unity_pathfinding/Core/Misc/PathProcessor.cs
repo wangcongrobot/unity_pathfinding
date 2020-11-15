@@ -109,7 +109,7 @@ namespace Pathfinding {
 					var pathHandler = pathHandlers[i];
 					threads[i] = new Thread(() => CalculatePathsThreaded(pathHandler));
 #if !UNITY_SWITCH || UNITY_EDITOR
-					// Note: Setting the thread name seems to crash when deploying for Switch: https://forum.arongranberg.com/t/path-processor-crashing-nintendo-switch-build/6584
+					// Note: Setting the thread name seems to crash when deploying for Switch: https:///t/path-processor-crashing-nintendo-switch-build/6584
 					threads[i].Name = "Pathfinding Thread " + i;
 #endif
 					threads[i].IsBackground = true;
@@ -249,7 +249,7 @@ namespace Pathfinding {
 		/// </summary>
 		public void InitializeNode (GraphNode node) {
 			if (!queue.AllReceiversBlocked) {
-				throw new System.Exception("Trying to initialize a node when it is not safe to initialize any nodes. Must be done during a graph update. See http://arongranberg.com/astar/docs/graph-updates.php#direct");
+				throw new System.Exception("Trying to initialize a node when it is not safe to initialize any nodes. Must be done during a graph update. See http:///graph-updates.php#direct");
 			}
 
 			for (int i = 0; i < pathHandlers.Length; i++) {

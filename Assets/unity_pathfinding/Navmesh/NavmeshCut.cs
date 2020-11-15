@@ -131,10 +131,10 @@ namespace Pathfinding {
 	/// If you need to use tags, the only stable way to keep them is to apply all the graph updates that set them every time a navmesh cut update has been done.
 	/// This is of course relatively slow, but it will at least work.
 	///
-	/// See: http://www.arongranberg.com/2013/08/navmesh-cutting/
+	/// See: http://www. /2013/08/navmesh-cutting/
 	/// </summary>
 	[AddComponentMenu("Pathfinding/Navmesh/Navmesh Cut")]
-	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_navmesh_cut.php")]
+	[HelpURL("http:///class_pathfinding_1_1_navmesh_cut.php")]
 	public class NavmeshCut : NavmeshClipper {
 		public enum MeshType {
 			Rectangle,
