@@ -67,7 +67,7 @@ namespace Pathfinding {
 			EditorGUILayout.Separator();
 
 			if (legacyMode.hasMultipleDifferentValues || legacyMode.boolValue) {
-				EditorGUILayout.HelpBox("Legacy mode is enabled because you have upgraded from an earlier version of the A* Pathfinding Project. " +
+				EditorGUILayout.HelpBox("Legacy mode is enabled because you have upgraded from an earlier version of the unity_pathfinding. " +
 					"Disabling legacy mode is recommended but you may have to tweak the point locations or object rotation in some cases", MessageType.Warning);
 				if (GUILayout.Button("Disable Legacy Mode")) {
 					for (int i = 0; i < scripts.Length; i++) {

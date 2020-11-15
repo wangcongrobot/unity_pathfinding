@@ -1,4 +1,4 @@
-The A* Pathfinding Project uses some 3rd party code to handle zip compression and Json serialization.
+The unity_pathfinding uses some 3rd party code to handle zip compression and Json serialization.
 They were chosen for good compatibility with the Unity platform. Modifications have been done to reduce the size and improve their compatibility, especially with the iOS/iPhone platform.
 
 Their respective licenses are included in the folders.

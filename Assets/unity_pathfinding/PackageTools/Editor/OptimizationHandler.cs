@@ -49,14 +49,14 @@ namespace Pathfinding {
 		};
 
 		static string GetPackageRootDirectory () {
-			var paths = Directory.GetDirectories(Application.dataPath, "AstarPathfindingProject", SearchOption.AllDirectories);
+			var paths = Directory.GetDirectories(Application.dataPath, "unity_pathfinding", SearchOption.AllDirectories);
 
 			if (paths.Length > 0) {
 				return paths[0];
 			}
 
-			Debug.LogError("Could not find AstarPathfindingProject root folder");
-			return Application.dataPath + "/AstarPathfindingProject";
+			Debug.LogError("Could not find unity_pathfinding root folder");
+			return Application.dataPath + "/unity_pathfinding";
 		}
 
 		static Dictionary<BuildTargetGroup, List<string> > GetDefineSymbols () {

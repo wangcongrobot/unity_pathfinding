@@ -1,4 +1,4 @@
-Shader "Hidden/AstarPathfindingProject/Navmesh Outline" {
+Shader "Hidden/unity_pathfinding/Navmesh Outline" {
 	Properties {
 		_Color ("Main Color", Color) = (1,1,1,0.5)
 		_FadeColor ("Fade Color", Color) = (1,1,1,0.3)

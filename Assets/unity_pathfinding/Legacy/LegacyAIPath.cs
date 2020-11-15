@@ -9,7 +9,7 @@ namespace Pathfinding.Legacy {
 
 	/// <summary>
 	/// AI for following paths.
-	/// This AI is the default movement script which comes with the A* Pathfinding Project.
+	/// This AI is the default movement script which comes with the unity_pathfinding.
 	/// It is in no way required by the rest of the system, so feel free to write your own. But I hope this script will make it easier
 	/// to set up movement for the characters in your game. This script is not written for high performance, so I do not recommend using it for large groups of units.
 	/// \n

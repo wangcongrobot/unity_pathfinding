@@ -7,7 +7,7 @@ namespace Pathfinding {
 	[AddComponentMenu("Pathfinding/Pathfinding Debugger")]
 	[ExecuteInEditMode]
 	/// <summary>
-	/// Debugger for the A* Pathfinding Project.
+	/// Debugger for the unity_pathfinding.
 	/// This class can be used to profile different parts of the pathfinding system
 	/// and the whole game as well to some extent.
 	///
@@ -227,7 +227,7 @@ namespace Pathfinding {
 				boxRect = new Rect(5, yOffset, 310, 40);
 
 				text.Length = 0;
-				text.AppendLine("A* Pathfinding Project Debugger");
+				text.AppendLine("unity_pathfinding Debugger");
 				text.Append("A* Version: ").Append(AstarPath.Version.ToString());
 
 				if (showMemProfile) {

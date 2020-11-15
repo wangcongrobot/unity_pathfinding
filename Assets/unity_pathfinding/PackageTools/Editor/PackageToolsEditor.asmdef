@@ -1,7 +1,7 @@
 {
     "name": "PackageToolsEditor",
     "references": [
-        "AstarPathfindingProject"
+        "unity_pathfinding"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [

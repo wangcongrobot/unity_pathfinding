@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Pathfinding {
 	/// <summary>
-	/// Common interface for all movement scripts in the A* Pathfinding Project.
+	/// Common interface for all movement scripts in the unity_pathfinding.
 	/// See: <see cref="Pathfinding.AIPath"/>
 	/// See: <see cref="Pathfinding.RichAI"/>
 	/// See: <see cref="Pathfinding.AILerp"/>

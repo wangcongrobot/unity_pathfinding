@@ -7,7 +7,7 @@ namespace Pathfinding {
 	/// <summary>Internal utility class for looking up editor resources</summary>
 	public static class EditorResourceHelper {
 		/// <summary>
-		/// Path to the editor assets folder for the A* Pathfinding Project. If this path turns out to be incorrect, the script will try to find the correct path
+		/// Path to the editor assets folder for the unity_pathfinding. If this path turns out to be incorrect, the script will try to find the correct path
 		/// See: LoadStyles
 		/// </summary>
 		public static string editorAssets;
@@ -53,7 +53,7 @@ namespace Pathfinding {
 				projectPath = projectPath.Remove(projectPath.Length-("Assets".Length));
 			}
 
-			editorAssets = "Assets/AstarPathfindingProject/Editor/EditorAssets";
+			editorAssets = "Assets/unity_pathfinding/Editor/EditorAssets";
 			if (!System.IO.File.Exists(projectPath + editorAssets + "/AstarEditorSkinLight.guiskin") && !System.IO.File.Exists(projectPath + editorAssets + "/AstarEditorSkin.guiskin")) {
 				//Initiate search
 
@@ -86,7 +86,7 @@ namespace Pathfinding {
 				}
 
 				if (!found) {
-					Debug.LogWarning("Could not locate editor assets folder. Make sure you have imported the package correctly.\nA* Pathfinding Project");
+					Debug.LogWarning("Could not locate editor assets folder. Make sure you have imported the package correctly.\nunity_pathfinding");
 					return false;
 				}
 			}

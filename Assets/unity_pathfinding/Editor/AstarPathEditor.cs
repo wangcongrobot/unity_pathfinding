@@ -29,7 +29,7 @@ namespace Pathfinding {
 		/// <summary>Used to make sure correct behaviour when handling undos</summary>
 		static uint ignoredChecksum;
 
-		const string scriptsFolder = "Assets/AstarPathfindingProject";
+		const string scriptsFolder = "Assets/unity_pathfinding";
 
 		#region SectionFlags
 
@@ -158,8 +158,8 @@ namespace Pathfinding {
 			}
 
 			if (!System.IO.Directory.Exists(projectPath + scriptsFolder)) {
-				string error = "Could not enable Js support. AstarPathfindingProject folder did not exist in the default location.\n" +
-							   "If you get this message and the AstarPathfindingProject is not at the root of your Assets folder (i.e at Assets/AstarPathfindingProject)" +
+				string error = "Could not enable Js support. unity_pathfinding folder did not exist in the default location.\n" +
+							   "If you get this message and the unity_pathfinding is not at the root of your Assets folder (i.e at Assets/unity_pathfinding)" +
 							   " then you should move it to the root";
 
 				Debug.LogError(error);
@@ -178,14 +178,14 @@ namespace Pathfinding {
 
 
 			AssetDatabase.MoveAsset(scriptsFolder + "/Editor", "Assets/AstarPathfindingEditor/Editor");
-			AssetDatabase.MoveAsset(scriptsFolder, "Assets/Plugins/AstarPathfindingProject");
+			AssetDatabase.MoveAsset(scriptsFolder, "Assets/Plugins/unity_pathfinding");
 			AssetDatabase.Refresh();
 		}
 
 		/// <summary>Disables JS support if it was enabled. This is done by restructuring folders in the project</summary>
 		static void DisableJs () {
-			if (System.IO.Directory.Exists(Application.dataPath+"/Plugins/AstarPathfindingProject")) {
-				string error = AssetDatabase.MoveAsset("Assets/Plugins/AstarPathfindingProject", scriptsFolder);
+			if (System.IO.Directory.Exists(Application.dataPath+"/Plugins/unity_pathfinding")) {
+				string error = AssetDatabase.MoveAsset("Assets/Plugins/unity_pathfinding", scriptsFolder);
 				if (error != "") {
 					Debug.LogError("Couldn't disable Js - "+error);
 				} else {
@@ -194,7 +194,7 @@ namespace Pathfinding {
 					} catch (System.Exception) {}
 				}
 			} else {
-				Debug.LogWarning("Could not disable JS - Could not find directory '"+Application.dataPath+"/Plugins/AstarPathfindingProject'");
+				Debug.LogWarning("Could not disable JS - Could not find directory '"+Application.dataPath+"/Plugins/unity_pathfinding'");
 			}
 
 			if (System.IO.Directory.Exists(Application.dataPath+"/AstarPathfindingEditor/Editor")) {
@@ -230,16 +230,16 @@ namespace Pathfinding {
 			// Do some loading and checking
 			if (!LoadStyles()) {
 				EditorGUILayout.HelpBox("The GUISkin 'AstarEditorSkin.guiskin' in the folder "+EditorResourceHelper.editorAssets+"/ was not found or some custom styles in it does not exist.\n"+
-					"This file is required for the A* Pathfinding Project editor.\n\n"+
+					"This file is required for the unity_pathfinding editor.\n\n"+
 					"If you are trying to add A* to a new project, please do not copy the files outside Unity, "+
 					"export them as a UnityPackage and import them to this project or download the package from the Asset Store"+
-					"or the 'scripts only' package from the A* Pathfinding Project website.\n\n\n"+
+					"or the 'scripts only' package from the unity_pathfinding website.\n\n\n"+
 					"Skin loading is done in the AstarPathEditor.cs --> LoadStyles method", MessageType.Error);
 				return;
 			}
 
 #if ASTAR_ATAVISM
-			EditorGUILayout.HelpBox("This is a special version of the A* Pathfinding Project for Atavism. This version only supports scanning recast graphs and exporting them, but no pathfinding during runtime.", MessageType.Info);
+			EditorGUILayout.HelpBox("This is a special version of the unity_pathfinding for Atavism. This version only supports scanning recast graphs and exporting them, but no pathfinding during runtime.", MessageType.Info);
 #endif
 
 			EditorGUI.BeginChangeCheck();
@@ -477,11 +477,11 @@ namespace Pathfinding {
 			GUILayout.EndHorizontal();
 
 			if (aboutArea.BeginFade()) {
-				GUILayout.Label("The A* Pathfinding Project was made by Aron Granberg\nYour current version is "+AstarPath.Version);
+				GUILayout.Label("The unity_pathfinding was made by Aron Granberg\nYour current version is "+AstarPath.Version);
 
 #if !ASTAR_ATAVISM
 				if (FullyDefinedVersion(newVersion) > FullyDefinedVersion(AstarPath.Version)) {
-					EditorGUILayout.HelpBox("A new "+(beta ? "beta " : "")+"version of the A* Pathfinding Project is available, the new version is "+
+					EditorGUILayout.HelpBox("A new "+(beta ? "beta " : "")+"version of the unity_pathfinding is available, the new version is "+
 						newVersion, MessageType.Info);
 
 					if (GUILayout.Button("What's new?")) {
@@ -502,11 +502,11 @@ namespace Pathfinding {
 				}
 #endif
 
-				if (GUILayout.Button(new GUIContent("Documentation", "Open the documentation for the A* Pathfinding Project"))) {
+				if (GUILayout.Button(new GUIContent("Documentation", "Open the documentation for the unity_pathfinding"))) {
 					Application.OpenURL(AstarUpdateChecker.GetURL("documentation"));
 				}
 
-				if (GUILayout.Button(new GUIContent("Project Homepage", "Open the homepage for the A* Pathfinding Project"))) {
+				if (GUILayout.Button(new GUIContent("Project Homepage", "Open the homepage for the unity_pathfinding"))) {
 					Application.OpenURL(AstarUpdateChecker.GetURL("homepage"));
 				}
 			}

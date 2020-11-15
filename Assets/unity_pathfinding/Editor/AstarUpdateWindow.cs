@@ -18,9 +18,9 @@ namespace Pathfinding {
 			window.version = version;
 			window.summary = summary;
 #if UNITY_4_6 || UNITY_5_0
-			window.title = "New Version of the A* Pathfinding Project";
+			window.title = "New Version of the unity_pathfinding";
 #else
-			window.titleContent = new GUIContent("New Version of the A* Pathfinding Project");
+			window.titleContent = new GUIContent("New Version of the unity_pathfinding");
 #endif
 			return window;
 		}
@@ -50,7 +50,7 @@ namespace Pathfinding {
 			}
 
 			GUILayout.Label("New Update Available!", largeStyle);
-			GUILayout.Label("There is a new version of the <b>A* Pathfinding Project</b> available for download.\n" +
+			GUILayout.Label("There is a new version of the <b>unity_pathfinding</b> available for download.\n" +
 				"The new version is <b>" + version + "</b> you have <b>" + AstarPath.Version + "</b>\n\n"+
 				"<i>Summary:</i>\n"+summary, normalStyle
 				);

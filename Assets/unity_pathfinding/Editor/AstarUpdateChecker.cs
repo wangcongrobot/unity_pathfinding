@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace Pathfinding {
-	/// <summary>Handles update checking for the A* Pathfinding Project</summary>
+	/// <summary>Handles update checking for the unity_pathfinding</summary>
 	[InitializeOnLoad]
 	public static class AstarUpdateChecker {
 #if UNITY_2018_1_OR_NEWER
@@ -25,7 +25,7 @@ namespace Pathfinding {
 
 		static System.Version _latestBetaVersion;
 
-		/// <summary>Description of the latest update of the A* Pathfinding Project</summary>
+		/// <summary>Description of the latest update of the unity_pathfinding</summary>
 		static string _latestVersionDescription;
 
 		static bool hasParsedServerMessage;
@@ -58,7 +58,7 @@ namespace Pathfinding {
 			}
 		}
 
-		/// <summary>Latest version of the A* Pathfinding Project</summary>
+		/// <summary>Latest version of the unity_pathfinding</summary>
 		public static System.Version latestVersion {
 			get {
 				RefreshServerMessage();
@@ -69,7 +69,7 @@ namespace Pathfinding {
 			}
 		}
 
-		/// <summary>Latest beta version of the A* Pathfinding Project</summary>
+		/// <summary>Latest beta version of the unity_pathfinding</summary>
 		public static System.Version latestBetaVersion {
 			get {
 				RefreshServerMessage();
@@ -161,7 +161,7 @@ namespace Pathfinding {
 		static bool CheckForUpdates () {
 			if (updateCheckDownload != null && updateCheckDownload.isDone) {
 				if (!string.IsNullOrEmpty(updateCheckDownload.error)) {
-					Debug.LogWarning("There was an error checking for updates to the A* Pathfinding Project\n" +
+					Debug.LogWarning("There was an error checking for updates to the unity_pathfinding\n" +
 						"The error might disappear if you switch build target from Webplayer to Standalone because of the webplayer security emulation\nError: " +
 						updateCheckDownload.error);
 					updateCheckDownload = null;

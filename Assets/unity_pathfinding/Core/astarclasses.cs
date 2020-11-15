@@ -525,7 +525,7 @@ namespace Pathfinding {
 		/// <summary>
 		/// NNConstraint to use.
 		/// The Pathfinding.NNConstraint.SuitableGraph function will be called on the NNConstraint to enable filtering of which graphs to update.\n
-		/// Note: As the Pathfinding.NNConstraint.SuitableGraph function is A* Pathfinding Project Pro only, this variable doesn't really affect anything in the free version.
+		/// Note: As the Pathfinding.NNConstraint.SuitableGraph function is unity_pathfinding only, this variable doesn't really affect anything in the free version.
 		/// </summary>
 		public NNConstraint nnConstraint = NNConstraint.None;
 

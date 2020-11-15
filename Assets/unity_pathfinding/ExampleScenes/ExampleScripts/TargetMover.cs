@@ -6,7 +6,7 @@ namespace Pathfinding {
 	/// Moves the target in example scenes.
 	/// This is a simple script which has the sole purpose
 	/// of moving the target point of agents in the example
-	/// scenes for the A* Pathfinding Project.
+	/// scenes for the unity_pathfinding.
 	///
 	/// It is not meant to be pretty, but it does the job.
 	/// </summary>

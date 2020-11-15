@@ -8,7 +8,7 @@ namespace Pathfinding {
 
 	/// <summary>
 	/// AI for following paths.
-	/// This AI is the default movement script which comes with the A* Pathfinding Project.
+	/// This AI is the default movement script which comes with the unity_pathfinding.
 	/// It is in no way required by the rest of the system, so feel free to write your own. But I hope this script will make it easier
 	/// to set up movement for the characters in your game.
 	/// This script works well for many types of units, but if you need the highest performance (for example if you are moving hundreds of characters) you

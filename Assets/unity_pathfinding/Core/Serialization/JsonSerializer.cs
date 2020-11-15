@@ -517,7 +517,7 @@ namespace Pathfinding.Serialization {
 			}
 
 			if (FullyDefinedVersion(meta.version) > FullyDefinedVersion(AstarPath.Version)) {
-				Debug.LogWarning("Trying to load data from a newer version of the A* Pathfinding Project\nCurrent version: "+AstarPath.Version+" Data version: "+meta.version +
+				Debug.LogWarning("Trying to load data from a newer version of the unity_pathfinding\nCurrent version: "+AstarPath.Version+" Data version: "+meta.version +
 					"\nThis is usually fine as the stored data is usually backwards and forwards compatible." +
 					"\nHowever node data (not settings) can get corrupted between versions (even though I try my best to keep compatibility), so it is recommended " +
 					"to recalculate any caches (those for faster startup) and resave any files. Even if it seems to load fine, it might cause subtle bugs.\n");
@@ -635,7 +635,7 @@ namespace Pathfinding.Serialization {
 			// is done so that references can be resolved
 			var entry = GetEntry("graph_references"+binaryExt);
 
-			if (entry == null) throw new Exception("Node references not found in the data. Was this loaded from an older version of the A* Pathfinding Project?");
+			if (entry == null) throw new Exception("Node references not found in the data. Was this loaded from an older version of the unity_pathfinding?");
 
 			var reader = GetBinaryReader(entry);
 			int maxNodeIndex = reader.ReadInt32();
@@ -668,7 +668,7 @@ namespace Pathfinding.Serialization {
 			var zipIndex = graphIndexInZip[graph];
 			var entry = GetEntry("graph"+zipIndex+"_references"+binaryExt);
 
-			if (entry == null) throw new Exception("Node references for graph " + zipIndex + " not found in the data. Was this loaded from an older version of the A* Pathfinding Project?");
+			if (entry == null) throw new Exception("Node references for graph " + zipIndex + " not found in the data. Was this loaded from an older version of the unity_pathfinding?");
 
 			var reader = GetBinaryReader(entry);
 			var ctx = new GraphSerializationContext(reader, int2Node, graph.graphIndex, meta);

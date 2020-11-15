@@ -1,7 +1,7 @@
 {
-    "name": "AstarPathfindingProjectEditor",
+    "name": "unity_pathfindingEditor",
     "references": [
-        "AstarPathfindingProject",
+        "unity_pathfinding",
         "PackageToolsEditor"
     ],
     "optionalUnityReferences": [],
