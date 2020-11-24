@@ -1,4 +1,8 @@
 ﻿using UnityEngine;
+// using System;
+// using System.IO;
+// using System.Text;
+
 // Note this line, if it is left out, the script won't know that the class 'Path' exists and it will throw compiler errors
 // This line should always be present at the top of scripts which use pathfinding
 using Pathfinding;
@@ -70,6 +74,8 @@ public class AstarAI : MonoBehaviour {
                 break;
             }
         }
+
+        Debug.Log("path.vectorPath: " + path.vectorPath);
 
         // Slow down smoothly upon approaching the end of the path
         // This value will smoothly go from 1 to 0 as the agent approaches the last waypoint in the path.
