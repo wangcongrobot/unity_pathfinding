@@ -15,6 +15,8 @@ public class AstarAI : MonoBehaviour {
 
     public Path path;
 
+    public string data_path = "/home/cong/workspace/unity-motion-planning/unity_pathfinding/";
+
     public float speed = 2;
 
     public float nextWaypointDistance = 3;
@@ -42,6 +44,13 @@ public class AstarAI : MonoBehaviour {
             // Reset the waypoint counter so that we start to move towards the first point in the path
             currentWaypoint = 0;
         }
+        Debug.Log("Get a path: \n" + path);
+        Debug.Log("duration: " + path.heuristic);
+        Debug.Log("duration: " + path.vectorPath);
+        Debug.Log("duration: " + path.GetTotalLength());
+        // Debug.Log("duration: " + path.GetTraversalCost);
+        // Debug.Log("duration: " + path.duration);
+        // break;
     }
 
     public void Update () {
@@ -49,6 +58,8 @@ public class AstarAI : MonoBehaviour {
             // We have no path to follow yet, so don't do anything
             return;
         }
+        // Debug.Log("path: " + path);
+        // return;
 
         // Check in a loop if we are close enough to the current waypoint to switch to the next one.
         // We do this in a loop because many waypoints might be close to each other and we may reach
@@ -75,7 +86,10 @@ public class AstarAI : MonoBehaviour {
             }
         }
 
-        Debug.Log("path.vectorPath: " + path.vectorPath);
+        Debug.Log("path.vectorPath: " + currentWaypoint + path.vectorPath[currentWaypoint]);
+        // Pathfinding.Serialization.AstarSerializer.SaveToFile(data_path, path.vectorPath);
+        // FunnelModifier.WriteAllText(data_path, path.vectorPath);
+
 
         // Slow down smoothly upon approaching the end of the path
         // This value will smoothly go from 1 to 0 as the agent approaches the last waypoint in the path.
