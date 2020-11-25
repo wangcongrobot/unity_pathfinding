@@ -618,6 +618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {fileID: 813704534}
+  file_path: /home/cong/workspace/unity-motion-planning/unity_pathfinding/log.csv
   speed: 2
   nextWaypointDistance: 3
   reachedEndOfPath: 0
@@ -2191,14 +2192,14 @@ MonoBehaviour:
   - 29
   - 30
   - 31
-  heuristic: 2
+  heuristic: 0
   heuristicScale: 1
   threadCount: -1
   maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
-    mode: 0
+    mode: 1
     seed: 0
     pivotPointRoot: {fileID: 0}
     spreadOutCount: 1
@@ -2278,12 +2279,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4063988}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93862a95c24d1cafb9f1b613b19310cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {fileID: 813704534}
+  file_path: /home/cong/workspace/unity-motion-planning/unity_pathfinding/log.csv
   speed: 2
   nextWaypointDistance: 3
   reachedEndOfPath: 0
@@ -3957,12 +3959,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429733688}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93862a95c24d1cafb9f1b613b19310cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {fileID: 813704534}
+  file_path: /home/cong/workspace/unity-motion-planning/unity_pathfinding/log.csv
   speed: 2
   nextWaypointDistance: 3
   reachedEndOfPath: 0
@@ -5003,12 +5006,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816025895}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93862a95c24d1cafb9f1b613b19310cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {fileID: 813704534}
+  file_path: /home/cong/workspace/unity-motion-planning/unity_pathfinding/log.csv
   speed: 2
   nextWaypointDistance: 3
   reachedEndOfPath: 0
@@ -6655,12 +6659,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452697774}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93862a95c24d1cafb9f1b613b19310cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {fileID: 813704534}
+  file_path: /home/cong/workspace/unity-motion-planning/unity_pathfinding/log.csv
   speed: 2
   nextWaypointDistance: 3
   reachedEndOfPath: 0
@@ -6936,12 +6941,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1522613728}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93862a95c24d1cafb9f1b613b19310cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {fileID: 813704534}
+  file_path: /home/cong/workspace/unity-motion-planning/unity_pathfinding/log.csv
   speed: 2
   nextWaypointDistance: 3
   reachedEndOfPath: 0
@@ -9028,12 +9034,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085022885}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93862a95c24d1cafb9f1b613b19310cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {fileID: 813704534}
+  file_path: /home/cong/workspace/unity-motion-planning/unity_pathfinding/log.csv
   speed: 2
   nextWaypointDistance: 3
   reachedEndOfPath: 0

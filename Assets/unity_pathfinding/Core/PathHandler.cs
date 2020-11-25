@@ -1,5 +1,6 @@
 #define DECREASE_KEY
 using System.Collections.Generic;
+using System;
 
 namespace Pathfinding {
 	/// <summary>
@@ -184,6 +185,8 @@ namespace Pathfinding {
 		}
 
 		public PathNode GetPathNode (int nodeIndex) {
+			// Debug.Log("node.NodeIndex" + nodeIndex);
+			Console.WriteLine("Hello World!" + nodeIndex);
 			return nodes[nodeIndex];
 		}
 
@@ -193,6 +196,8 @@ namespace Pathfinding {
 		/// are used at the same time if multithreading is enabled.
 		/// </summary>
 		public PathNode GetPathNode (GraphNode node) {
+			// Debug.Log("node.NodeIndex" + node.NodeIndex);
+			Console.WriteLine("Hello World!" + node.NodeIndex);
 			return nodes[node.NodeIndex];
 		}
 
