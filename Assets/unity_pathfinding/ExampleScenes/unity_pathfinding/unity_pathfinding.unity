@@ -2016,7 +2016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   drawGizmos: 1
-  detailedGizmos: 0
+  detailedGizmos: 1
   startEndModifier:
     addPoints: 0
     exactStartPoint: 3
@@ -2138,12 +2138,12 @@ MonoBehaviour:
     data_cachedStartup: 
     cacheStartup: 0
   showNavGraphs: 1
-  showUnwalkableNodes: 1
+  showUnwalkableNodes: 0
   debugMode: 4
   debugFloor: 0
   debugRoof: 1
   manualDebugFloorRoof: 0
-  showSearchTree: 1
+  showSearchTree: 0
   unwalkableNodeDebugSize: 0.2
   logPathResults: 2
   maxNearestNodeDistance: 100
@@ -2192,14 +2192,14 @@ MonoBehaviour:
   - 29
   - 30
   - 31
-  heuristic: 0
+  heuristic: 3
   heuristicScale: 1
-  threadCount: -1
+  threadCount: -2
   maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
-    mode: 1
+    mode: 0
     seed: 0
     pivotPointRoot: {fileID: 0}
     spreadOutCount: 1
