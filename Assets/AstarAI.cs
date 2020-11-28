@@ -15,7 +15,7 @@ public class AstarAI : MonoBehaviour {
 
     public Pathfinding.Path path;
 
-    public string file_path = "/home/cong/workspace/unity-motion-planning/unity_pathfinding/log.csv";
+    public string file_path = "/home/cong/workspace/unity-motion-planning/unity/unity_pathfinding3/log.csv";
 
     public float speed = 2;
 

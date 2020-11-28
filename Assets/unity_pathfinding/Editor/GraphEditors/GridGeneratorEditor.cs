@@ -433,30 +433,30 @@ namespace Pathfinding {
 					EditorGUI.indentLevel--;
 				}
 
-				DrawTextureData(graph.textureData, graph);
-				EditorGUI.indentLevel -= 2;
+				// DrawTextureData(graph.textureData, graph);
+				// EditorGUI.indentLevel -= 2;
 			}
 		}
 
 		protected virtual void DrawJPS (GridGraph graph) {
-			graph.useJumpPointSearch = EditorGUILayout.Toggle(new GUIContent("Use Jump Point Search", "Jump Point Search can significantly speed up pathfinding. But only works on uniformly weighted graphs"), graph.useJumpPointSearch);
+			graph.useJumpPointSearch = EditorGUILayout.Toggle(new GUIContent(""), graph.useJumpPointSearch);
 			if (graph.useJumpPointSearch) {
-				EditorGUILayout.HelpBox("Jump Point Search assumes that there are no penalties applied to the graph. Tag penalties cannot be used either.", MessageType.Warning);
+				// EditorGUILayout.HelpBox("Jump Point Search assumes that there are no penalties applied to the graph. Tag penalties cannot be used either.", MessageType.Warning);
 
-#if !ASTAR_JPS
-				EditorGUILayout.HelpBox("JPS needs to be enabled using a compiler directive before it can be used.\n" +
-					"Enabling this will add ASTAR_JPS to the Scriping Define Symbols field in the Unity Player Settings", MessageType.Warning);
-				if (GUILayout.Button("Enable Jump Point Search support")) {
-					OptimizationHandler.EnableDefine("ASTAR_JPS");
-				}
-#endif
-			} else {
-#if ASTAR_JPS
-				EditorGUILayout.HelpBox("If you are not using JPS in any scene, you can disable it to save memory", MessageType.Info);
-				if (GUILayout.Button("Disable Jump Point Search support")) {
-					OptimizationHandler.DisableDefine("ASTAR_JPS");
-				}
-#endif
+// #if !ASTAR_JPS
+// 				EditorGUILayout.HelpBox("JPS needs to be enabled using a compiler directive before it can be used.\n" +
+// 					"Enabling this will add ASTAR_JPS to the Scriping Define Symbols field in the Unity Player Settings", MessageType.Warning);
+// 				if (GUILayout.Button("Enable Jump Point Search support")) {
+// 					OptimizationHandler.EnableDefine("ASTAR_JPS");
+// 				}
+// #endif
+// 			} else {
+// #if ASTAR_JPS
+// 				EditorGUILayout.HelpBox("If you are not using JPS in any scene, you can disable it to save memory", MessageType.Info);
+// 				if (GUILayout.Button("Disable Jump Point Search support")) {
+// 					OptimizationHandler.DisableDefine("ASTAR_JPS");
+// 				}
+// #endif
 			}
 		}
 

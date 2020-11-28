@@ -382,19 +382,19 @@ namespace Pathfinding {
 			DrawOptimizationSettings();
 			DrawAboutArea();
 
-			bool showNavGraphs = EditorGUILayout.Toggle("Show Graphs", script.showNavGraphs);
-			if (script.showNavGraphs != showNavGraphs) {
-				script.showNavGraphs = showNavGraphs;
-				RepaintSceneView();
-			}
+			// bool showNavGraphs = EditorGUILayout.Toggle("Show Graphs", script.showNavGraphs);
+			// if (script.showNavGraphs != showNavGraphs) {
+			// 	script.showNavGraphs = showNavGraphs;
+			// 	RepaintSceneView();
+			// }
 		}
 
 		/// <summary>Draws optimizations settings.</summary>
 		void DrawOptimizationSettings () {
 			optimizationSettingsArea.Begin();
-			optimizationSettingsArea.Header("Optimization");
+			// optimizationSettingsArea.Header("Optimization");
 
-			if (optimizationSettingsArea.BeginFade()) {
+			if (!optimizationSettingsArea.BeginFade()) {
 				defines = defines ?? OptimizationHandler.FindDefines();
 
 				EditorGUILayout.HelpBox("Using C# pre-processor directives, performance and memory usage can be improved by disabling features that you don't use in the project.\n" +
@@ -451,7 +451,7 @@ namespace Pathfinding {
 				GUI.changed = true;
 			}
 
-#if !ASTAR_ATAVISM
+#if ASTAR_ATAVISM
 			System.Version newVersion = AstarUpdateChecker.latestVersion;
 			bool beta = false;
 
@@ -477,38 +477,37 @@ namespace Pathfinding {
 			GUILayout.EndHorizontal();
 
 			if (aboutArea.BeginFade()) {
-				GUILayout.Label("The unity_pathfinding was made by Aron Granberg\nYour current version is "+AstarPath.Version);
+				// GUILayout.Label("The unity_pathfinding");
 
-#if !ASTAR_ATAVISM
-				if (FullyDefinedVersion(newVersion) > FullyDefinedVersion(AstarPath.Version)) {
-					EditorGUILayout.HelpBox("A new "+(beta ? "beta " : "")+"version of the unity_pathfinding is available, the new version is "+
-						newVersion, MessageType.Info);
+#if ASTAR_ATAVISM
+				// if (FullyDefinedVersion(newVersion) > FullyDefinedVersion(AstarPath.Version)) {
+				// 	EditorGUILayout.HelpBox("A"+"is "+newVersion, MessageType.Info);
 
-					if (GUILayout.Button("What's new?")) {
-						Application.OpenURL(AstarUpdateChecker.GetURL(beta ? "beta_changelog" : "changelog"));
-					}
+					// if (GUILayout.Button("What's new?")) {
+					// 	Application.OpenURL(AstarUpdateChecker.GetURL(beta ? "beta_changelog" : "changelog"));
+					// }
 
-					if (GUILayout.Button("Click here to find out more")) {
-						Application.OpenURL(AstarUpdateChecker.GetURL("findoutmore"));
-					}
+					// if (GUILayout.Button("Click here to find out more")) {
+					// 	Application.OpenURL(AstarUpdateChecker.GetURL("findoutmore"));
+					// }
 
-					GUIUtilityx.PushTint(new Color(0.3F, 0.9F, 0.3F));
+					// GUIUtilityx.PushTint(new Color(0.3F, 0.9F, 0.3F));
 
-					if (GUILayout.Button("Download new version")) {
-						Application.OpenURL(AstarUpdateChecker.GetURL("download"));
-					}
+					// if (GUILayout.Button("Download new version")) {
+					// 	Application.OpenURL(AstarUpdateChecker.GetURL("download"));
+					// }
 
-					GUIUtilityx.PopTint();
-				}
+				// 	GUIUtilityx.PopTint();
+				// }
 #endif
 
-				if (GUILayout.Button(new GUIContent("Documentation", "Open the documentation for the unity_pathfinding"))) {
-					Application.OpenURL(AstarUpdateChecker.GetURL("documentation"));
-				}
+				// if (GUILayout.Button(new GUIContent("Documentation", "Open the documentation for the unity_pathfinding"))) {
+				// 	Application.OpenURL(AstarUpdateChecker.GetURL("documentation"));
+				// }
 
-				if (GUILayout.Button(new GUIContent("Project Homepage", "Open the homepage for the unity_pathfinding"))) {
-					Application.OpenURL(AstarUpdateChecker.GetURL("homepage"));
-				}
+				// if (GUILayout.Button(new GUIContent("Project Homepage", "Open the homepage for the unity_pathfinding"))) {
+				// 	Application.OpenURL(AstarUpdateChecker.GetURL("homepage"));
+				// }
 			}
 
 			aboutArea.End();
