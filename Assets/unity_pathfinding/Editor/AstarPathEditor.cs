@@ -385,7 +385,7 @@ namespace Pathfinding {
 			// bool showNavGraphs = EditorGUILayout.Toggle("Show Graphs", script.showNavGraphs);
 			// if (script.showNavGraphs != showNavGraphs) {
 			// 	script.showNavGraphs = showNavGraphs;
-			// 	RepaintSceneView();
+			// 	RepaintSceneView();-
 			// }
 		}
 

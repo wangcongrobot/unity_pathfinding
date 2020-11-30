@@ -51,8 +51,8 @@ public class AstarAI : MonoBehaviour {
         // Debug.Log("Get a path: \n" + path);
         // Debug.Log("duration: " + path.heuristic);
         // Debug.Log("duration: " + path.vectorPath);
-        // Debug.Log("duration: " + path.GetTotalLength());
-        // Debug.Log("duration: " + path.GetTraversalCost);
+        // Debug.Log("GetTotalLength: " + path.GetTotalLength());
+        // Debug.Log("GetTraversalCost: " + path.GetTraversalCost);
         // Debug.Log("duration: " + path.duration);
         // break;
         // var stream = System.IO.File.CreateText(file_path);
@@ -69,10 +69,10 @@ public class AstarAI : MonoBehaviour {
             // Debug.Log("path x: " + i + " " + path.vectorPath[i][0].ToString());
             // Debug.Log("path y: " + i + " " + path.vectorPath[i][1].ToString());
             // Debug.Log("path z: " + i + " " + path.vectorPath[i][2].ToString());
-            string csvRow = string.Format("{0},{1},{2},{3},\n",i, x, y, z);
+            string csvRow = string.Format("{0},{1},{2},{3},{4},{5},\n",i, x, y, z, path.GetTotalLength(),"");
             // stream.WriteLine(csvRow);
             // Debug.Log("Log to file" + i + " " + csvRow);
-            System.IO.File.AppendAllText(file_path, csvRow);
+            // System.IO.File.AppendAllText(file_path, csvRow);
             // System.IO.File.AppendAllLines(file_path, csvRow);
             // Debug.Log("Path info 1: " + path.path.Count);
             // Debug.Log("Path info 2: " + path.searchedNodes());
@@ -84,6 +84,7 @@ public class AstarAI : MonoBehaviour {
             // Debug.Log("Path info 8: " + path.pathID);
             // Debug.Log("Path info 9: " + path.path);
             
+            // Node
             // if (pathHandler == null) FailWithError("Field pathHandler is not set. Please report this bug.");
             // PathNode nodeR = pathHandler.GetPathNode(path.path[8]);
             // Debug.Log("Path info 9: " + path.path[i].H);
@@ -104,23 +105,25 @@ public class AstarAI : MonoBehaviour {
 			// startRNode.H = CalculateHScore(startNode);
         }
 
-        pathHandler = new PathHandler(0,0);
-        pathHandler.InitializeForPath(path);
+        // pathHandler = new PathHandler(0,0);
+        // pathHandler.InitializeForPath(path);
         // Debug.Log("pathHandler: " + pathHandler.PathID);
+        // Debug.Log("node: " + pathHandler.GetPathNode(path.path[0]));
         
         // pathHandler.InitializeForPath(path);        
         // System.IO.File.WriteAllText(file_path, csvRow);
-        // Debug.Log("Path node count: " + path.path.Count);
+        Debug.Log("Path node count: " + path.path.Count);
         
         for (int j = 0; j < path.path.Count; j++)
         {
-            // Debug.Log("Path Node index: " + j + " " + path.path[j].NodeIndex);
-            // Debug.Log("Path Node position: " + j + " " + path.path[j].position);
-            // Debug.Log("Path Node Penalty: " + j + " " + path.path[j].Penalty);
-            // Debug.Log("Path Node position: " + j + " " + path.path[j].position);
+            Debug.Log("Path Node index: " + j + " " + path.path[j].NodeIndex);
+            Debug.Log("Path Node position: " + j + " " + path.path[j].position);
+            Debug.Log("Path Node Penalty: " + j + " " + path.path[j].Penalty);
+            Debug.Log("Path Node: " + j + " " + path.path[j]);
             // Debug.Log("Path Node position: " + j + " " + path.path[j].position);
 
             // pn = pathHandler.GetPathNode(path.path[j].NodeIndex);
+            // pn = pathHandler.GetPathNode(path.path[j]);
             // pathHandler.startNode
 
             // Debug.Log("pathHandler" + pathHandler.threadID);

@@ -116,6 +116,10 @@ namespace Pathfinding {
 		/// <summary>Holds the (possibly post processed) path as a Vector3 list</summary>
 		public List<Vector3> vectorPath;
 
+		/// <summary>Holds the G score, H score, F score, Penalty score, total length,  as a Vector3 list</summary>
+		public List<Vector3> vectorVarGHF;
+		public List<Vector3> vectorVarPT;
+
 		/// <summary>The node currently being processed</summary>
 		protected PathNode currentR;
 
@@ -732,6 +736,11 @@ namespace Pathfinding {
 			if (!error) {
 				text.Append(" Path Length ");
 				text.Append(path == null ? "Null" : path.Count.ToString());
+			}
+
+			if (!error) {
+				text.Append(" Path Total Length ");
+				// text.Append(path == null ? "Null" : this.path.GetTotalLength());
 			}
 		}
 
